@@ -1,0 +1,12 @@
+#!/usr/bin/env Rscript
+library(SeuratDisk)
+args <- commandArgs(trailingOnly = TRUE)
+
+# usage: h5adtoh5seurat infiles
+# infiles is h5ad file to be converted to h5Seurat and auto-saved.
+
+infiles <- args[-length(args)]
+
+Convert(infiles, dest = "h5seurat", verbose = TRUE)
+
+quit()

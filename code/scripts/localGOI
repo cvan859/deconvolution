@@ -1,0 +1,56 @@
+#!/usr/bin/env Rscript
+
+args <- commandArgs(trailingOnly = TRUE)
+binProp <- args[length(args)-4]
+bulkDF <- args[length(args)-3]
+GOIStr <- args[length(args)-2]
+methodStr <- args[length(args)-1]
+tissueStr <- args[length(args)]
+
+if (!length(args) > 1) {
+  stop("
+Usage: localGOI binProp bulkDF GOIStr methodStr tissueStr
+binProp (cell types by individuals) and bulkDF (genes by individuals).
+GOIStr is the GOI, used as filter, and as label for plots.
+methodStr is the method of interest, used as filter, and as label for plots.
+tissueStr is the tissue of interest, used as label for plots."
+    )
+}
+
+library(dplyr)
+library(ggplot2)
+library(WGCNA)
+library(mclust)
+
+binPropcsv = read.csv(binProp, header=TRUE)
+row.names(binPropcsv) = binPropcsv$X
+binPropcsv$X = NULL
+DeconBulk = binPropcsv[grepl(methodStr, binPropcsv$method),]
+row.names(DeconBulk) = gsub("[0-9]$", "", row.names(DeconBulk))
+bulkDFcsv = read.csv(bulkDF, header=TRUE)
+bulkDFcsv = bulkDFcsv[!is.na(bulkDFcsv$X),]
+row.names(bulkDFcsv) = bulkDFcsv$X
+bulkDFcsv$X = NULL
+
+LocalGOIenrichment = function(DeconBulkDF, bulkGenesDF, GOIStr, methodStr, tissueStr) {
+  cellAbundances = as.data.frame(t(DeconBulkDF))
+  bulkComp = as.data.frame(t(bulkGenesDF))
+  cellAbundances = cellAbundances[row.names(cellAbundances) %in% row.names(bulkComp),]
+  if (isTRUE(row.names(cellAbundances)[5] == row.names(bulkComp)[5])==F) {
+    stop('Check your input dataframes! They should have individuals as columns.')
+  }
+
+  cors_table = bicorAndPvalue(cellAbundances, bulkComp[,grep(GOIStr,colnames(bulkComp))], use = 'p')
+  melted_cors_table = reshape2::melt(cors_table$bicor)
+  melted_cors_table$Var2=NULL
+  colnames(melted_cors_table) = c('CellType', 'bicor')
+  pval1 = reshape2::melt(cors_table$p)
+  melted_cors_table$pvalue = pval1$value
+  melted_cors_table$direction = ifelse(melted_cors_table$bicor>0, 'positive cor', 'negative cor')
+  ggplot(melted_cors_table, aes(x=CellType, y=-log10(pvalue))) + geom_col(aes(fill=direction)) + theme_classic() + theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) + ggtitle(paste0(GOIStr, ' enrichment with ', tissueStr, ' cell types'))
+  ggsave(paste0(GOIStr, 'enrichment_', methodStr,'_', tissueStr, '.png'), width=8, height=6, units='in')
+}
+
+LocalGOIenrichment(DeconBulk, bulkDFcsv, GOIStr, methodStr, tissueStr)
+
+quit()

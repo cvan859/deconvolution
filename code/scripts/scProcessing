@@ -1,0 +1,42 @@
+#!/usr/bin/env Rscript
+
+args <- commandArgs(trailingOnly = TRUE)
+infiles <- args[length(args)-2]
+annot <- args[length(args)-1]
+outfile <- args[length(args)]
+
+if (!length(args) > 1) {
+  stop("
+    Usage: scProcessing infile annot outfile
+    Infile is h5seurat file. Cell annotations are extracted to view.
+    Annot is annotation labels to use: 'free' = $free_annotation; 'ont' = $cell_ontology_class
+    Outfile is dataframe of single-cell markers (genes by cell types)."
+    )
+}
+
+library(Seurat)
+library(SeuratDisk)
+
+scSeurat <- LoadH5Seurat(infiles, misc=F)
+
+if ((annot == 'free')==T) {
+  scSeurat = SetIdent(scSeurat, value = scSeurat@meta.data$free_annotation)
+  expmat = GetAssayData(scSeurat, slot = "data")
+  colnames(expmat) = scSeurat$free_annotation
+} else if ((annot == 'ont')==T) {
+  scSeurat = SetIdent(scSeurat, value = scSeurat@meta.data$cell_ontology_class)
+  expmat = GetAssayData(scSeurat, slot = "data")
+  colnames(expmat) = scSeurat$cell_ontology_class
+} else {
+  stop("'free' or 'ont' not given!")
+}
+
+duplicate_removed = expmat[!grepl('.', row.names(expmat), fixed = T),]
+colnames(duplicate_removed) = gsub("\\..*","", colnames(duplicate_removed))
+scmarkers = as.data.frame(duplicate_removed)
+scDF = scmarkers[!duplicated(row.names(scmarkers)),]
+scDF = as.data.frame(sapply(unique(colnames(scDF)), function(x) rowMeans(scDF[,colnames(scDF) == x])))
+
+write.csv(scDF, outfile, row.names=T, quote=F)
+
+quit()

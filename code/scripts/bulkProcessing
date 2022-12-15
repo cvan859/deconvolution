@@ -1,0 +1,29 @@
+#!/usr/bin/env Rscript
+
+args <- commandArgs(trailingOnly = TRUE)
+infile <- args[length(args)-2]
+tissueStr <- args[length(args)-1]
+outfile <- args[length(args)]
+
+if (!length(args) > 1) {
+  stop("
+Usage: bulkProcessing infile tissueStr outfile
+Infile is Rdata workspace with GTEx bulk data loaded and formatted.
+tissueStr is tissue of interest.
+Outfile is dataframe of bulk markers (genes by individuals)."
+    )
+}
+
+load(infile)
+
+bulkgenes = GTEx_full[,grepl(tissueStr, colnames(GTEx_full))]
+colnames(bulkgenes) = gsub(paste0('_', tissueStr), '', colnames(bulkgenes))
+bulkgenes = t(bulkgenes)
+
+bulkgenes = bulkgenes[,colSums(bulkgenes != 0) > 0]
+bulkgenes = bulkgenes[,!is.na(colnames(bulkgenes))]
+bulkDF = as.data.frame(bulkgenes)
+
+write.csv(bulkDF, outfile, row.names=T, quote=F)
+
+quit()

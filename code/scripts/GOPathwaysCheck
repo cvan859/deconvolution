@@ -1,0 +1,18 @@
+#!/usr/bin/env Rscript
+
+args <- commandArgs(trailingOnly = TRUE)
+infile <- args[-length(args)]
+outfile <- args[length(args)]
+
+if (!length(args) > 1) {
+  stop("
+Usage: GOPathwaysCheck infile outfile
+Infile is Rdata workspace with human Uniprot GO terms loaded and formatted.
+Outfile is table of GO biological processes that can be queried."
+    )
+}
+
+load(infile)
+GOPathways = go_terms$Gene.ontology..biological.process.
+
+write.table(GOPathways, outfile, sep="\t", quote=F)

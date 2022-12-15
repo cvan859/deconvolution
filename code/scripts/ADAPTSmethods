@@ -1,0 +1,84 @@
+#!/usr/bin/env Rscript
+
+args <- commandArgs(trailingOnly = TRUE)
+scDF <- args[length(args)-3]
+bulkDF <- args[length(args)-2]
+tissueStr <- args[length(args)-1]
+outfile <- args[length(args)]
+
+if (!length(args) > 1) {
+  stop("
+Usage: ADAPTSmethods scDF bulkDF tissueStr outfile
+scDF (genes by cell types) and bulkDF (genes by individuals).
+tissueStr is tissue of interest, used as label for plots.
+outfile is dataframe of binned proportions, to be subsetted after looking at DeconMethodComp plot."
+    )
+}
+
+library(useful)
+library(dplyr)
+library(R.utils)
+library(ADAPTS)
+library(ggplot2)
+library(DeconRNASeq)
+library(WGCNA)
+library(mclust)
+
+scDF = read.csv(scDF, header=TRUE)
+row.names(scDF) = scDF$X
+scDF$X = NULL
+bulkDF = read.csv(bulkDF, header=TRUE)
+bulkDF = bulkDF[!is.na(bulkDF$X),]
+row.names(bulkDF) = bulkDF$X
+bulkDF$X = NULL
+AlgorithmsList = c('nnls', 'DCQ', 'proportionsInAdmixture', 'DeconRNASeq')
+
+IndivVarPlot = function(CellTypeProportions, filelabel, methodStr, tissueStr) {
+  gtexTypeVar = reshape2::melt(as.matrix(CellTypeProportions))
+  colnames(gtexTypeVar) = c('cell_type', 'GTEXID', 'proportion')
+  ggplot(gtexTypeVar, aes(x=GTEXID, y=proportion, fill=cell_type)) + geom_col() + ggtitle(paste0(methodStr))
+  ggsave(paste0(methodStr,'var_', tissueStr, '.png'), width=6, height=9, units="in")
+}
+
+EstPropPlot = function(CellTypeProportions, filelabel, methodStr, tissueStr) {
+  CellTypeProportions$cell_type_mean = rowMeans(CellTypeProportions)
+  CellTypeProportions$cell_type = row.names(CellTypeProportions)
+  CellTypeProportions$method = paste0(methodStr)
+  binned_proportions = CellTypeProportions
+  ggplot2::ggplot(CellTypeProportions, aes(x=cell_type, y=cell_type_mean, fill=cell_type)) + geom_col() + theme_classic() + theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1), legend.position = 'none') + ggtitle(paste0(methodStr))
+  ggsave(paste0(methodStr,'prop_', tissueStr, '.png'), width=6, height=6, units="in")
+  return(binned_proportions)
+}
+
+DeconMethods = function(scDF, bulkDF, tissueStr, AlgorithmsList) {
+  binned_proportions=NULL
+  for (methodStr in AlgorithmsList) {
+    if (methodStr == 'nnls') {
+      CellTypeProportions = as.data.frame(estCellPercent.nnls(scDF, bulkDF))
+      filelabel = 'nnls_'
+    } else if (methodStr == 'DCQ') {
+      CellTypeProportions = as.data.frame(estCellPercent.DCQ(scDF, bulkDF))
+      filelabel = 'DCQ_'
+    } else if (methodStr == 'proportionsInAdmixture') {
+      CellTypeProportions = as.data.frame(estCellPercent.proportionsInAdmixture(scDF, bulkDF))
+      filelabel = 'PIA_'
+    } else if (methodStr == 'DeconRNASeq') {
+      CellTypeProportions = as.data.frame(estCellPercent.DeconRNASeq(scDF, bulkDF))
+      filelabel = 'DRS_'
+    } else {
+      stop("Either misspelled, or not a method currently useable.")
+    }
+
+    IndivVarPlot(CellTypeProportions, filelabel, methodStr, tissueStr)
+    EstPropPlot(CellTypeProportions, filelabel, methodStr, tissueStr) -> prop_output
+    binned_proportions = as.data.frame(rbind(binned_proportions, prop_output))
+  }
+  ggplot(binned_proportions, aes(x=cell_type, y=cell_type_mean, fill=cell_type)) + geom_col() + theme_classic() + theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1), legend.position = 'none') + facet_wrap(~ method, scales = 'free_y') + xlab('') + ylab('')
+  ggsave(paste0('DeconMethodComp_', tissueStr, '.png'), width=6, height=6, units="in")
+  return(binned_proportions)
+}
+
+binned_proportions = DeconMethods(scDF, bulkDF, tissueStr, AlgorithmsList)
+write.csv(binned_proportions, outfile, row.names=T, quote=F)
+
+quit()

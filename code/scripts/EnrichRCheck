@@ -1,0 +1,61 @@
+#!/usr/bin/env Rscript
+
+args <- commandArgs(trailingOnly = TRUE)
+scDF <- args[-length(args)]
+
+# Usage: EnrichRCheck scDF
+# Given scDF (genes by cell types), auto-saves each cell type on various databases into a folder.
+
+library(useful)
+library(dplyr)
+library(R.utils)
+library(enrichR)
+library(ggplot2)
+
+scDFcsv = read.csv(scDF, header=TRUE)
+row.names(scDFcsv) = scDFcsv$X
+scDFcsv$X = NULL
+
+websiteLive <-TRUE
+dbsFull = listEnrichrDbs()
+categoryNames = c('Transcription', 'Pathways', 'Ontologies', 'Diseases/Drugs', 'Cell Types', 'Misc', 'Legacy', 'Crowd')
+categoryIDnumber = dbsFull$categoryId
+
+for (val in 1:length(categoryNames)) {
+  for (i in 1:length(dbsFull$libraryName)) {
+    if (dbsFull$categoryId[i] == val) {
+      dbsFull$categoryName[i] = categoryNames[val]
+    }
+  }
+}
+
+dbs = dbsFull[grepl('Cell Types',dbsFull$categoryName),]$libraryName
+dbs1 = dbs[c(13, 14, 16, 17, 18, 19, 20)]
+
+plotEnrFun = function(tableName, dirName, databaseList) {
+  for (val in 1:(length(tableName))) {
+    if ((dim(tableName[[val]])[1]==0)==T | (dim(tableName[[val]])[2]==0)==T) {
+      next
+    } else {
+      plotEnrich(tableName[[val]], showTerms = 10, numChar = 40, y = "Count", orderBy = "P.value", title = paste0(databaseList[val]))
+      ggsave(path=paste0(dirName), filename=paste0(dirName, "_", databaseList[val], ".png"), width=6, height=9, units="in")
+    }
+  }
+}
+
+EnrCallFun = function(SingleCellDF, databaseList) {
+  colNamesList = colnames(SingleCellDF)
+  for (i in 1:length(colNamesList)) {
+    cellType = subset(SingleCellDF, select=colNamesList[4])
+    sorted = cellType[order(-cellType[,1]), , drop=F]
+    searchList = row.names(sorted)[1:30]
+    enriched = enrichr(searchList, databaseList)
+    dirName = paste0("Enrichr_", gsub(' ', '', colNamesList[i]))
+    dir.create(dirName)
+    plotEnrFun(enriched, dirName, databaseList)
+  }
+}
+
+EnrCallFun(scDFcsv, dbs1)
+
+quit()

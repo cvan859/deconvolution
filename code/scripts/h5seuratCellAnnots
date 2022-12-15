@@ -1,0 +1,25 @@
+#!/usr/bin/env Rscript
+
+args <- commandArgs(trailingOnly = TRUE)
+infiles <- args[-length(args)]
+outfile <- args[length(args)]
+
+if (!length(args) > 1) {
+  stop("
+Usage: h5seuratCellAnnots infile outfile
+Infile is h5seurat file. Cell annotations are extracted to view and saved into outfile."
+    )
+}
+
+library(Seurat)
+library(SeuratDisk)
+
+scSeurat <- LoadH5Seurat(infiles, misc=F)
+
+annotationTable=NULL
+annotationTable$free = cbind(table(scSeurat$free_annotation))
+annotationTable$ont = cbind(table(scSeurat$cell_ontology_class))
+annotationTable = as.data.frame(annotationTable)
+write.csv(annotationTable, outfile, row.names=T, quote=F)
+
+quit()
