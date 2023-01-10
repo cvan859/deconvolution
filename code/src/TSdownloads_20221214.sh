@@ -10,7 +10,7 @@ wget 'https://figshare.com/ndownloader/files/34701967' -O scBoneMarrow.h5ad.zip 
 wget 'https://figshare.com/ndownloader/files/34701973' -O scFat.h5ad.zip #fat
 wget 'https://figshare.com/ndownloader/files/34701979' -O scKidney.h5ad.zip #kidney
 wget 'https://figshare.com/ndownloader/files/34701982' -O scLargeInstestine.h5ad.zip #large intestine
-#wget 'https://figshare.com/ndownloader/files/34701991' -O scLung.h5ad.zip #lung
+wget 'https://figshare.com/ndownloader/files/34701991' -O scLung.h5ad.zip #lung
 wget 'https://figshare.com/ndownloader/files/34701994' -O scLymphNode.h5ad.zip #lymph node
 #wget 'https://figshare.com/ndownloader/files/34701997' -O scMammary.h5ad.zip #mammary
 ##wget 'https://figshare.com/ndownloader/files/34702000' -O scMuscle.h5ad.zip #muscle

@@ -7,13 +7,13 @@ outfile <- args[length(args)]
 if (!length(args) > 1) {
   stop("
 Usage: GTExTissuesCheck infile outfile
-Infile is Rdata workspace with GTEx bulk data loaded and formatted.
-Outfile is table of GTEx tissues that can be queried."
+Infile is GTEx_subfiltered.Rdata workspace with GTEx bulk data loaded, filtered, and formatted.
+Outfile is table of GTEx tissue labels that can be queried."
     )
 }
 
-load(infile)
-GTExTissues = strsplit(colnames(GTEx_full), "_")
-GTExTissues = unique(sapply(GTExTissues, "[[", 2))
+library(dplyr)
 
+load(infile)
+GTExTissues = unique(strsplit(row.names(GTEx_subfiltered), "_") %>% sapply("[[", 2))
 write.table(GTExTissues, outfile, sep="\t", quote=F)
