@@ -1,0 +1,8 @@
+freq	free_annotation	cell_ontology_class
+1	95	endothelial cell	endothelial cell
+2	131	nk cell	nk cell
+3	181	cd4-positive helper t cell	cd4-positive helper t cell
+4	241	cd8-positive, alpha-beta t cell	cd8-positive, alpha-beta t cell
+5	321	macrophage	macrophage
+6	341	b cell	b cell
+7	8331	kidney epithelial cell	kidney epithelial cell

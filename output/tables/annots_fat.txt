@@ -1,0 +1,14 @@
+freq	free_annotation	cell_ontology_class
+1	4	Mast_Cells	mast cell
+2	16	Smooth_muscle_cells	smooth muscle cell
+3	23	B_Cells	b cell
+4	26	Plasma_cells	plasma cell
+5	160	Leucocytes	leucocyte
+6	440	Neutrophil	neutrophil
+7	572	Natural_Killar_cells	nk cell
+8	982	Myofibroblasts	myofibroblast cell
+9	1311	Mesenchymal Stem Cells	mesenchymal stem cell
+10	1715	T_Cells	t cell
+11	2807	Macrophages	macrophage
+12	3748	Endothelial_cells	endothelial cell
+13	8459	Fibroblasts	fibroblast

@@ -1,0 +1,17 @@
+freq	free_annotation	cell_ontology_class
+1	10	B lymphocytes	b cell
+2	17	Cycling immune cells	immune cell
+3	31	Ciliated epithelium	ciliated epithelial cell
+4	53	Uterine NK cells	nk cell
+5	68	Cycling epithelial cells	epithelial cell
+6	86	Lymphatic endothelium	endothelial cell of lymphatic vessel
+7	95	Pericyte	pericyte cell
+8	194	Unciliated epithelium	epithelial cell of uterus
+9	199	Myometrial smooth muscle	myometrial cell
+10	344	Macrophages	macrophage
+11	390	Vascular smooth muscle	vascular associated smooth muscle cell
+12	546	T lymphocytes	t cell
+13	1144	Uterine fibroblast	NA
+14	1870	Endometrial stromal fibbroblast	NA
+15	2077	Endothelium	endothelial cell
+16	3014	NA	fibroblast

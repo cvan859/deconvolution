@@ -1,0 +1,18 @@
+freq	free_annotation	cell_ontology_class
+1	4	plasmablast	plasmablast
+2	87	erythrocyte	erythrocyte
+3	131	neutrophil	neutrophil
+4	142	naive b cell	naive b cell
+5	265	macrophage	macrophage
+6	287	myeloid progenitor	myeloid progenitor
+7	310	memory b cell	memory b cell
+8	443	NAMPT neutrophil	nampt neutrophil
+9	617	hematopoietic stem cell	hematopoietic stem cell
+10	678	NK cell	nk cell
+11	757	erythroid progenitor	erythroid progenitor
+12	825	plasma cell	plasma cell
+13	853	granulocyte	granulocyte
+14	1147	CD8 t cell	cd8-positive, alpha-beta t cell
+15	1389	monocyte	monocyte
+16	2025	CD4 t cell	cd4-positive, alpha-beta t cell
+17	2337	CD24 Neutrophil	cd24 neutrophil

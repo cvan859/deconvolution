@@ -1,0 +1,36 @@
+freq	free_annotation	cell_ontology_class
+1	2	granulocyte	granulocyte
+2	3	CD24 Neutrophil	cd24 neutrophil
+3	3	CD24 Neutrophil	myeloid progenitor
+4	3	myeloid progenitor	cd24 neutrophil
+5	3	myeloid progenitor	myeloid progenitor
+6	8	non-classical monocyte	non-classical monocyte
+7	10	plasmablast	plasmablast
+8	11	plasmacytoid dendritic cell	plasmacytoid dendritic cell
+9	15	Cd141 positive myeloid dendritic cell	cd141-positive myeloid dendritic cell
+10	21	NAMPT neutrophil	nampt neutrophil
+11	29	basophil	basophil
+12	31	alpha beta T cell	t cell
+13	70	hematopoietic stem cell	hematopoietic stem cell
+14	239	platelet	platelet
+15	376	cd8-positive, alpha-beta t cell	NA
+16	412	naive thymus-derived cd4-positive, alpha-beta t cell	naive thymus-derived cd4-positive, alpha-beta t cell
+17	488	macrophage	macrophage
+18	488	macrophage	plasma cell
+19	488	plasma cell	macrophage
+20	488	plasma cell	plasma cell
+21	518	type I NK T cell	type i nk t cell
+22	616	NK cell	NA
+23	854	memory b cell	memory b cell
+24	946	CD8 t cell	NA
+25	949	cd4-positive, alpha-beta memory t cell	cd4-positive, alpha-beta memory t cell
+26	1322	NA	cd8-positive, alpha-beta t cell
+27	1493	cd8-positive, alpha-beta cytokine secreting effector t cell	cd8-positive, alpha-beta cytokine secreting effector t cell
+28	2239	naive b cell	naive b cell
+29	2332	nk cell	NA
+30	2863	CD4 t cell	cd4-positive, alpha-beta t cell
+31	2948	NA	nk cell
+32	7211	classical monocyte	classical monocyte
+33	8432	neutrophil	neutrophil
+34	8972	monocyte	monocyte
+35	10484	erythrocyte	erythrocyte

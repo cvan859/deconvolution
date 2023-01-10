@@ -1,0 +1,180 @@
+freq	free_annotation	cell_ontology_class
+1	3	Myeloid Dendritic cells	myeloid dendritic cell
+2	4	Mast_Cells	NA
+3	6	cd4 cd8 T cell	double-positive, alpha-beta thymocyte
+4	8	cd8-positive t cells	NA
+5	9	Mast Cell	NA
+6	10	B lymphocytes	NA
+7	14	plasmablast	plasmablast
+8	15	Cd141 positive myeloid dendritic cell	NA
+9	17	classic dendritic cells type 1	mature conventional dendritic cell
+10	17	conventional dendritic cell	mature conventional dendritic cell
+11	17	Cycling immune cells	mature conventional dendritic cell
+12	18	Mast cell	NA
+13	19	NK cells	NA
+14	23	B_Cells	NA
+15	23	cd4-positive t cells	NA
+16	26	Plasma_cells	NA
+17	30	erythroid cells	erythroid lineage cell
+18	31	alpha beta T cell	NA
+19	32	double negative alpha beta T cell effector memory (DN3)	dn4 thymocyte
+20	34	Dendritic cell	liver dendritic cell
+21	34	Plasma	liver dendritic cell
+22	34	Erythroid Progenitor Cell	liver dendritic cell
+23	36	Langerhans cells	langerhans cell
+24	39	AREG High T-Cell	NA
+25	39	Erythrocytes	NA
+26	44	immature natural killer cell	immature natural killer cell
+27	44	monocytes	immature natural killer cell
+28	46	plasma cells	NA
+29	48	CD141-positive myeloid dendritic cell	NA
+30	52	not-existing	NA
+31	53	Uterine NK cells	NA
+32	59	CD4-positive helper T cells	NA
+33	60	Plasma cell	NA
+34	65	cd4 T cell	NA
+35	68	CD1c-positive myeloid dendritic cell	NA
+36	69	Sorted Myeloid	NA
+37	70	T cells	NA
+38	71	Naive CD4-positive helper T cells	NA
+39	73	Hematopoietic stem cell	NA
+40	73	cd1c-positive myeloid dendritic cell	NA
+41	77	T cell-low RNA	NA
+42	80	Natural killer cells	NA
+43	80	cd8-positive alpha-beta t cell	NA
+44	88	Monocytes	NA
+45	88	Naive CD8-positive T cell	NA
+46	89	CD4 T cell-low RNA	NA
+47	93	CD4 T cell	NA
+48	96	plasmacytoid dendritic cell	plasmacytoid dendritic cell
+49	102	Proliferating NK cell	NA
+50	104	cd141-positive myeloid dendritic cell	NA
+51	108	Erythrocyte	NA
+52	108	macrophages	NA
+53	126	Regulatory T cell	NA
+54	129	CD8-positive cytotoxic T cells	NA
+55	132	cd4-positive alpha-beta t cell	NA
+56	160	Leucocytes	leucocyte
+57	165	classic dendritic cells type 2	NA
+58	175	Natural Killer T-Cell	NA
+59	182	dendritic cells	NA
+60	184	NA	cd141-positive myeloid dendritic cell
+61	209	retina - microglia	microglial cell
+62	237	t cells	NA
+63	255	CD8B+ Natural Killer T-Cell	cd8b-positive nk t cell
+64	257	Natural Killer Cell	NA
+65	268	platelet	platelet
+66	290	myeloid progenitor	myeloid progenitor
+67	296	regulatory t cell	NA
+68	306	NA	cd1c-positive myeloid dendritic cell
+69	339	CD4-positive memory T cell	NA
+70	348	NKT cell	NA
+71	351	dendritic cell	NA
+72	398	T follicular helper cell-like	t follicular helper cell
+73	464	NAMPT neutrophil	nampt neutrophil
+74	464	cd8 T cell	nampt neutrophil
+75	501	innate-like CD8 alpha beta T, thymic resident	NA
+76	518	type I NK T cell	NA
+77	519	alpha-beta T cell	NA
+78	523	NA	nkt cell
+79	533	NA	dendritic cell
+80	546	T lymphocytes	NA
+81	547	AREG Low T-Cell	NA
+82	553	thymocyte	thymocyte
+83	572	Natural_Killar_cells	NA
+84	610	naive thymus-derived cd8-positive, alpha-beta t cell	NA
+85	630	NA	cd8-positive, alpha-beta cytotoxic t cell
+86	650	mast cells	NA
+87	654	Neutrophil	NA
+88	689	intermediate monocyte	intermediate monocyte
+89	698	NA	naive thymus-derived cd8-positive, alpha-beta t cell
+90	705	mature nk t cell	mature nk t cell
+91	715	basophil	basophil
+92	721	hematopoietic stem cell	NA
+93	757	erythroid progenitor	NA
+94	761	naïve regulatory T cell	naive regulatory t cell
+95	764	cd4-positive, alpha-beta t cell	NA
+96	794	NA	hematopoietic stem cell
+97	843	NA	erythroid progenitor
+98	855	granulocyte	granulocyte
+99	857	CD8-positive memory T cell	NA
+100	881	regulatory T cell	NA
+101	985	double negative alpha beta T cell (DN2)	dn1 thymic pro-t cell
+102	1020	Macrophage	NA
+103	1038	nkt cell	NA
+104	1044	non-classical monocyte	non-classical monocyte
+105	1071	Monocyte	NA
+106	1081	CD8+ T-Cell	NA
+107	1124	Tissue resident macrophage	NA
+108	1127	Naive B cell	NA
+109	1221	CD4 Helper T cell	NA
+110	1303	NA	regulatory t cell
+111	1311	Mesenchymal Stem Cells	mesenchymal stem cell
+112	1493	cd8-positive, alpha-beta cytokine secreting effector t cell	cd8-positive, alpha-beta cytokine secreting effector t cell
+113	1557	mast cell	NA
+114	1611	Monocyte/Macrophage	NA
+115	1715	T_Cells	NA
+116	1788	double negative alpha beta T cell (DN1)	dn3 thymocyte
+117	1801	NK cell	NA
+118	1837	b cell	NA
+119	1862	myeloid cell	NA
+120	1968	Plasma cells	NA
+121	1979	CD8 T cell	NA
+122	2064	B cells	NA
+123	2093	CD8 t cell	NA
+124	2105	cd8-positive alpha-beta T cell	NA
+125	2109	Immune_notvalidated	NA
+126	2126	NA	immune cell
+127	2227	NA	myeloid cell
+128	2231	Cd8-positive alpha-beta T cell	NA
+129	2231	cd8-positive, alpha-beta t cell	NA
+130	2238	NA	mast cell
+131	2324	T-cells	NA
+132	2340	CD24 Neutrophil	cd24 neutrophil
+133	2537	innate lymphoid cell	NA
+134	2594	Innate lymphoid cells	NA
+135	2872	cd4-positive alpha-beta T cell	NA
+136	2888	Memory B cell	NA
+137	3172	naive thymus-derived cd4-positive, alpha-beta t cell	NA
+138	3243	NA	naive thymus-derived cd4-positive, alpha-beta t cell
+139	3356	CD4 helper T cell-like	NA
+140	3747	Macrophages	NA
+141	3758	NK T cell	NA
+142	3828	t cell	NA
+143	4154	cd4-positive, alpha-beta memory t cell	NA
+144	4436	cd4-positive helper t cell	NA
+145	4493	NA	cd4-positive, alpha-beta memory t cell
+146	4749	T cell	NA
+147	4888	CD4 t cell	NA
+148	5131	NA	innate lymphoid cell
+149	5165	cd8-positive, alpha-beta memory t cell	NA
+150	5257	Cd4-positive alpha-beta T cell	NA
+151	5314	NA	type i nk t cell
+152	5634	naive b cell	NA
+153	5860	CD8-positive alpha-beta thymocyte	NA
+154	5940	NA	cd8-positive alpha-beta t cell
+155	5972	nk cell	NA
+156	6022	NA	cd8-positive, alpha-beta memory t cell
+157	6761	NA	naive b cell
+158	6908	CD4-positive alpha-beta thymocyte	NA
+159	7040	NA	cd4-positive alpha-beta t cell
+160	8856	NA	nk cell
+161	9072	NA	cd4-positive helper t cell
+162	9411	plasma cell	NA
+163	10857	erythrocyte	NA
+164	11004	NA	erythrocyte
+165	11311	monocyte	NA
+166	11545	NA	plasma cell
+167	12192	NA	cd8-positive, alpha-beta t cell
+168	12514	NA	monocyte
+169	12788	memory b cell	NA
+170	13387	classical monocyte	classical monocyte
+171	14051	NA	cd4-positive, alpha-beta t cell
+172	14236	neutrophil	NA
+173	14682	NA	t cell
+174	14890	NA	neutrophil
+175	15676	NA	memory b cell
+176	15873	B cell	NA
+177	19807	NA	b cell
+178	27890	macrophage	NA
+179	35204	NA	macrophage

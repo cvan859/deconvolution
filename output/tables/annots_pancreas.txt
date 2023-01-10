@@ -1,0 +1,31 @@
+freq	free_annotation	cell_ontology_class
+1	2	Mast cell	NA
+2	9	pancreatic delta cell	pancreatic delta cell
+3	25	B cell	NA
+4	29	t cell	NA
+5	39	pancreatic stellate cell	NA
+6	47	NK cell	nk cell
+7	47	NK cell	fibroblast
+8	47	fibroblast	nk cell
+9	47	fibroblast	fibroblast
+10	51	mast cell	NA
+11	53	NA	mast cell
+12	63	plasma cell	plasma cell
+13	71	pancreatic alpha cell	pancreatic alpha cell
+14	71	pancreatic alpha cell	pancreatic pp cell
+15	71	pancreatic pp cell	pancreatic alpha cell
+16	71	pancreatic pp cell	pancreatic pp cell
+17	99	pancreatic beta cell	pancreatic beta cell
+18	119	b cell	NA
+19	144	NA	b cell
+20	172	pancreatic stellate cell activated	NA
+21	182	pancreatic stellate cell quiescent	NA
+22	393	NA	pancreatic stellate cell
+23	544	T cell	NA
+24	573	NA	t cell
+25	1170	pancreatic acing cell	NA
+26	1862	myeloid cell	myeloid cell
+27	2100	endothelial cell	endothelial cell
+28	2431	pancreatic ductal cell	pancreatic ductal cell
+29	4364	pancreatic acinar cell	NA
+30	5534	NA	pancreatic acinar cell

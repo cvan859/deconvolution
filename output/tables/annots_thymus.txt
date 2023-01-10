@@ -1,0 +1,55 @@
+freq	free_annotation	cell_ontology_class
+1	3	Myeloid Dendritic cells	myeloid dendritic cell
+2	8	erythrocyte	NA
+3	11	mast cell	mast cell
+4	12	mesothelial cell	mesothelial cell
+5	15	endothelial cell of lymphatic vessel	NA
+6	32	double negative alpha beta T cell effector memory (DN3)	dn4 thymocyte
+7	35	dendritic cell	dendritic cell
+8	39	Erythrocytes	NA
+9	44	immature natural killer cell	immature natural killer cell
+10	47	NA	erythrocyte
+11	80	Natural killer cells	NA
+12	86	fast muscle cell	fast muscle cell
+13	88	Monocytes	NA
+14	89	mature nk t cell	mature nk t cell
+15	89	plasma cell	mature nk t cell
+16	105	nk cell	NA
+17	158	macrophage	NA
+18	166	medullary thymic epithelial cell	medullary thymic epithelial cell
+19	181	endothelial cell of artery	NA
+20	185	NA	nk cell
+21	256	lymphatic endothelial cell	NA
+22	271	NA	endothelial cell of lymphatic vessel
+23	303	Macrophages	NA
+24	346	monocyte	NA
+25	349	cd8-positive, alpha-beta t cell	cd8-positive, alpha-beta t cell
+26	355	vascular arterial endothelial cell	NA
+27	383	vascular capillary endothelial cell	NA
+28	398	T follicular helper cell-like	t follicular helper cell
+29	434	NA	monocyte
+30	461	NA	macrophage
+31	501	innate-like CD8 alpha beta T, thymic resident	cd8-positive, alpha-beta cytotoxic t cell
+32	536	NA	endothelial cell of artery
+33	553	thymocyte	thymocyte
+34	662	vein endothelial cell	NA
+35	691	vascular associated smooth muscle cell	NA
+36	761	naïve regulatory T cell	naive regulatory t cell
+37	874	naive b cell	naive b cell
+38	979	capillary endothelial cell	NA
+39	985	double negative alpha beta T cell (DN2)	dn1 thymic pro-t cell
+40	1362	NA	capillary endothelial cell
+41	1439	Vascular smooth muscle	NA
+42	1442	vascular venous endothelial cell	NA
+43	1465	Plasma cells	NA
+44	1554	NA	plasma cell
+45	1788	double negative alpha beta T cell (DN1)	dn3 thymocyte
+46	1845	memory b cell	memory b cell
+47	1919	B cells	b cell
+48	2104	NA	vein endothelial cell
+49	2130	NA	vascular associated smooth muscle cell
+50	2594	Innate lymphoid cells	innate lymphoid cell
+51	3356	CD4 helper T cell-like	NA
+52	3924	fibroblast	fibroblast
+53	4255	cd4-positive helper t cell	NA
+54	7611	NA	cd4-positive helper t cell
