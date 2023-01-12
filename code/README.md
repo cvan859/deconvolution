@@ -1,6 +1,7 @@
 #!usr/bin/bash
 
 srun -c 8 -A mseldin_lab --pty --x11 bash -i
+srun -p free --nodes=1 --ntasks=8 --mem-per-cpu=12G --pty --x11 bash -i
 conda activate ee282
 cd /pub/cassandv/myrepos/deconvolution
 cd data/raw
@@ -39,8 +40,9 @@ bulkProcessing data/raw/GTEx_subfiltered.RData 'Heart' data/processed/bulkDF_hea
 # Run each tissue through ADAPTS and save figures.
 mkdir output/figures/deconvolution_heart
 cd output/figures/deconvolution_heart
-ADAPTSmethods ../../../data/processed/scDF_heart ../../../data/processed/bulkDF_heart 'heart' ../../data/processed/BinnedProportions
+ADAPTSmethods ../../../data/processed/scDF_heart.csv ../../../data/processed/bulkDF_heart.csv 'heart' ../../data/processed/binProp_heart.csv
 
+# Choose deconvolution method and subset binProp.
 
 
 ##### Extra Functions
@@ -50,11 +52,10 @@ mkdir output/figures/EnrichR_heart
 cd output/figures/EnrichR_heart
 EnrichRCheck scDF.csv #needs troubleshooting to work in Unix, R ok.
 
-# Correlate cell types locally with GOI.
+# Correlate cell types locally with GOI. You can change the deconvolution method.
 cd output/figures
-localGOI ../../data/processed/binnedProportions_heart.csv ../../data/processed/bulkDF_heart.csv 'CRLF2' 'DeconRNASeq' 'heart'
+localGOI ../../data/processed/binProp_heart.csv ../../data/processed/bulkDF_heart.csv 'CRLF2' 'DeconRNASeq' 'heart'
 
-# Correlate cell types with functional pathways in a tissue of interest.
+# Correlate cell types with functional pathways in a tissue of interest. You can change the deconvolution method.
 cd output/figures/crossTissueGO
-crossTissueGO ../../../data/raw/go_terms.RData ../../../data/processed/binnedProportions_heart.csv ../../../data/processed/bulkDF_heart.csv 'inflammatory' 'DeconRNASeq' 'heart'
-
+crossTissueGO ../../../data/raw/go_terms.RData ../../../data/processed/binProp_heart.csv ../../../data/processed/bulkDF_heart.csv 'inflammatory' 'DeconRNASeq' 'heart'
