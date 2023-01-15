@@ -1,8 +1,6 @@
 GTEx tissue label  single-cell dataset
-'Adipose'  'TS_Fat'
 'Adipose - Subcutaneous'  'TS_Fat'
 'Adipose - Visceral'  'TS_Fat'
-'Colon'  'TS_Large_Intestine'
 'Colon - Sigmoid'  'TS_Large_Intestine'
 'Colon - Transverse'  'TS_Large_Intestine'
 'Heart - Left Ventricle'  'TS_Heart'
