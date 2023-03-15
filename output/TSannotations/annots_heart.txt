@@ -1,0 +1,7 @@
+freq	free_annotation	cell_ontology_class
+1	74	Macrophages	macrophage
+2	222	Smooth Muscle Cells	smooth muscle cell
+3	250	Cardiac Fibroblast	fibroblast of cardiac tissue
+4	1089	Hepatocyte	hepatocyte
+5	2665	Endothelial Cells	cardiac endothelial cell
+6	7205	Cardiac Muscle Cells	cardiac muscle cell

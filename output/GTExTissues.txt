@@ -1,0 +1,50 @@
+x
+1	Adipose - Subcutaneous
+2	Adipose - Visceral (Omentum)
+3	Adrenal Gland
+4	Artery - Aorta
+5	Artery - Coronary
+6	Artery - Tibial
+7	Brain - Amygdala
+8	Brain - Anterior cingulate cortex (BA24)
+9	Brain - Caudate (basal ganglia)
+10	Brain - Cerebellar Hemisphere
+11	Brain - Cerebellum
+12	Brain - Cortex
+13	Brain - Frontal Cortex (BA9)
+14	Brain - Hippocampus
+15	Brain - Hypothalamus
+16	Brain - Nucleus accumbens (basal ganglia)
+17	Brain - Putamen (basal ganglia)
+18	Brain - Spinal cord (cervical c-1)
+19	Brain - Substantia nigra
+20	Breast - Mammary Tissue
+21	Cells - Cultured fibroblasts
+22	Cells - EBV-transformed lymphocytes
+23	Colon - Sigmoid
+24	Colon - Transverse
+25	Esophagus - Gastroesophageal Junction
+26	Esophagus - Mucosa
+27	Esophagus - Muscularis
+28	Heart - Atrial Appendage
+29	Heart - Left Ventricle
+30	Kidney - Cortex
+31	Liver
+32	Lung
+33	Minor Salivary Gland
+34	Muscle - Skeletal
+35	Nerve - Tibial
+36	Ovary
+37	Pancreas
+38	Pituitary
+39	Prostate
+40	Skin - Not Sun Exposed (Suprapubic)
+41	Skin - Sun Exposed (Lower leg)
+42	Small Intestine - Terminal Ileum
+43	Spleen
+44	Stomach
+45	Testis
+46	Thyroid
+47	Uterus
+48	Vagina
+49	Whole Blood

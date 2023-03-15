@@ -1,0 +1,47 @@
+freq	free_annotation	cell_ontology_class
+1	8	respiratory mucous cell	respiratory mucous cell
+2	10	myofibroblast cell	myofibroblast cell
+3	12	fibroblast	fibroblast
+4	15	serous cell of epithelium of bronchus	serous cell of epithelium of bronchus
+5	17	mesothelial cell	mesothelial cell
+6	18	plasmacytoid dendritic cell	plasmacytoid dendritic cell
+7	19	pulmonary ionocyte	pulmonary ionocyte
+8	25	smooth muscle cell	smooth muscle cell
+9	47	Bronchial vessel endothelial cell	endothelial cell of lymphatic vessel
+10	47	Bronchial vessel endothelial cell	bronchial vessel endothelial cell
+11	47	endothelial cell of lymphatic vessel	endothelial cell of lymphatic vessel
+12	47	endothelial cell of lymphatic vessel	bronchial vessel endothelial cell
+13	80	cd8-positive alpha-beta t cell	cd8-positive alpha-beta t cell
+14	80	cd8-positive alpha-beta t cell	vascular associated smooth muscle cell
+15	80	vascular associated smooth muscle cell	cd8-positive alpha-beta t cell
+16	80	vascular associated smooth muscle cell	vascular associated smooth muscle cell
+17	81	bronchial smooth muscle cell	bronchial smooth muscle cell
+18	87	b cell	b cell
+19	132	cd4-positive alpha-beta t cell	cd4-positive alpha-beta t cell
+20	132	cd4-positive alpha-beta t cell	nk cell
+21	132	nk cell	cd4-positive alpha-beta t cell
+22	132	nk cell	nk cell
+23	134	plasma cell	plasma cell
+24	174	neutrophil	neutrophil
+25	187	endothelial cell of artery	endothelial cell of artery
+26	211	type i pneumocyte	type i pneumocyte
+27	213	pericyte cell	pericyte cell
+28	252	intermediate monocyte	intermediate monocyte
+29	316	dendritic cell	dendritic cell
+30	324	alveolar fibroblast	alveolar fibroblast
+31	373	adventitial cell	adventitial cell
+32	485	lung microvascular endothelial cell	lung microvascular endothelial cell
+33	508	vein endothelial cell	vein endothelial cell
+34	543	cd4-positive, alpha-beta t cell	cd4-positive, alpha-beta t cell
+35	552	cd8-positive, alpha-beta t cell	cd8-positive, alpha-beta t cell
+36	569	capillary aerocyte	capillary aerocyte
+37	602	lung ciliated cell	lung ciliated cell
+38	686	basophil	basophil
+39	754	respiratory goblet cell	respiratory goblet cell
+40	965	capillary endothelial cell	capillary endothelial cell
+41	1005	non-classical monocyte	non-classical monocyte
+42	1038	club cell	club cell
+43	1487	classical monocyte	classical monocyte
+44	2188	basal cell	basal cell
+45	9146	type ii pneumocyte	type ii pneumocyte
+46	12160	macrophage	macrophage

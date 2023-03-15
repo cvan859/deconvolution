@@ -1,0 +1,15 @@
+freq	free_annotation	cell_ontology_class
+1	21	b cell	b cell
+2	26	epithelial cell	epithelial cell
+3	42	plasma cell	plasma cell
+4	44	lymphatic endothelial cell	lymphatic endothelial cell
+5	64	erythrocyte	erythrocyte
+6	105	mast cell	mast cell
+7	121	nk cell	nk cell
+8	138	artery endothelial cell	artery endothelial cell
+9	476	t cell	t cell
+10	1193	pericyte cell	pericyte cell
+11	1564	endothelial cell	endothelial cell
+12	3075	smooth muscle cell	smooth muscle cell
+13	3301	macrophage	macrophage
+14	5867	fibroblast	fibroblast

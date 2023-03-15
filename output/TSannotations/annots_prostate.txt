@@ -1,0 +1,33 @@
+freq	free_annotation	cell_ontology_class
+1	9	Mast Cell	mast cell
+2	11	Sperm Cell	sperm
+3	16	Neutrophil	neutrophil
+4	32	Stromal	stromal cell
+5	33	Monocyte	monocyte
+6	34	Erythroid Progenitor Cell	NA
+7	39	AREG High T-Cell	NA
+8	52	not-existing	NA
+9	60	Luminal Epithelial Cell	NA
+10	86	NA	erythroid progenitor
+11	88	CPE Low Luminal Epithelial Cell	NA
+12	175	Natural Killer T-Cell	nkt cell
+13	211	Hillock Epithelial Cell	hillock cell of prostate epithelium
+14	223	Fibroblast	fibroblast
+15	255	CD8B+ Natural Killer T-Cell	cd8b-positive nk t cell
+16	276	SCGB3A1 High Club Epithelial Cell	NA
+17	285	Smooth Muscle Cell	smooth muscle cell
+18	290	Hillock/Club Epithelial Cell	hillock-club cell of prostate epithelium
+19	317	Macrophage	macrophage
+20	350	LTF+ Epithelial Cell	NA
+21	365	Monocyte/Macrophage	myeloid cell
+22	512	PIGR High Club Epithelial Cell	NA
+23	547	AREG Low T-Cell	NA
+24	585	Endothelial Cell	endothelial cell
+25	586	NA	t cell
+26	788	NA	club cell of prostate epithelium
+27	944	CPE High Luminal Epithelial Cell	NA
+28	1081	CD8+ T-Cell	cd8-positive, alpha-beta t cell
+29	1092	NA	luminal cell of prostate epithelium
+30	3298	Basal Epithelial Cell	basal cell of prostate epithelium
+31	6287	Other Epithelial Cell	NA
+32	6637	NA	epithelial cell

@@ -1,0 +1,29 @@
+freq	free_annotation	cell_ontology_class
+1	29	platelet	platelet
+2	43	cd8-positive, alpha-beta t cell	cd8-positive, alpha-beta t cell
+3	43	cd8-positive, alpha-beta t cell	plasmacytoid dendritic cell
+4	43	plasmacytoid dendritic cell	cd8-positive, alpha-beta t cell
+5	43	plasmacytoid dendritic cell	plasmacytoid dendritic cell
+6	51	cd1c-positive myeloid dendritic cell	cd1c-positive myeloid dendritic cell
+7	51	cd1c-positive myeloid dendritic cell	cd141-positive myeloid dendritic cell
+8	51	cd141-positive myeloid dendritic cell	cd1c-positive myeloid dendritic cell
+9	51	cd141-positive myeloid dendritic cell	cd141-positive myeloid dendritic cell
+10	73	Hematopoietic stem cell	hematopoietic stem cell
+11	117	innate lymphoid cell	innate lymphoid cell
+12	131	intermediate monocyte	intermediate monocyte
+13	170	erythrocyte	erythrocyte
+14	288	regulatory t cell	regulatory t cell
+15	426	mature nk t cell	mature nk t cell
+16	596	endothelial cell	endothelial cell
+17	610	naive thymus-derived cd8-positive, alpha-beta t cell	naive thymus-derived cd8-positive, alpha-beta t cell
+18	1038	nkt cell	type i nk t cell
+19	1044	naive b cell	naive b cell
+20	1261	naive thymus-derived cd4-positive, alpha-beta t cell	naive thymus-derived cd4-positive, alpha-beta t cell
+21	1335	macrophage	macrophage
+22	1771	cd4-positive, alpha-beta memory t cell	cd4-positive, alpha-beta memory t cell
+23	2013	nk cell	nk cell
+24	3171	plasma cell	plasma cell
+25	4301	cd8-positive, alpha-beta memory t cell	cd8-positive, alpha-beta memory t cell
+26	4443	classical monocyte	classical monocyte
+27	4539	neutrophil	neutrophil
+28	6460	memory b cell	memory b cell

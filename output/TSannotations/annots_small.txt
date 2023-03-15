@@ -1,0 +1,32 @@
+freq	free_annotation	cell_ontology_class
+1	44	duodenum glandular cell	duodenum glandular cell
+2	46	gut endothelial cell	gut endothelial cell
+3	58	intestinal enteroendocrine cell	intestinal enteroendocrine cell
+4	61	monocyte	goblet cell
+5	61	monocyte	monocyte
+6	65	mast cell	mast cell
+7	68	neutrophil	neutrophil
+8	71	NA	intestinal crypt stem cell of small intestine
+9	92	cd8-positive, alpha-beta t cell	NA
+10	100	transit amplifying cell of small intestine	NA
+11	102	NA	intestinal crypt stem cell
+12	113	fibroblast	fibroblast
+13	127	intestinal transient amplifying cell	NA
+14	160	intestinal tuft cell	intestinal tuft cell
+15	173	intestinal crypt stem cell	NA
+16	177	paneth cell	NA
+17	227	NA	transit amplifying cell of small intestine
+18	300	NA	small intestine goblet cell
+19	303	plasma cell	plasma cell
+20	361	goblet cell	NA
+21	369	NA	immature enterocyte
+22	470	paneth cell of epithelium of small intestine	NA
+23	519	b cell	b cell
+24	573	NA	mature enterocyte
+25	647	NA	paneth cell of epithelium of small intestine
+26	837	mature enterocyte	NA
+27	1100	NA	enterocyte of epithelium of small intestine
+28	1205	immature enterocyte	NA
+29	2231	Cd8-positive alpha-beta T cell	NA
+30	2323	NA	cd8-positive, alpha-beta t cell
+31	5257	Cd4-positive alpha-beta T cell	cd4-positive, alpha-beta t cell

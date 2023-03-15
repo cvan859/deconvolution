@@ -1,0 +1,20 @@
+freq	free_annotation	cell_ontology_class
+1	12	mesothelial cell	mesothelial cell
+2	20	erythrocyte	erythrocyte
+3	46	mast cell	mast cell
+4	58	smooth muscle cell	smooth muscle cell
+5	133	endothelial cell of artery	endothelial cell of artery
+6	134	endothelial cell of lymphatic vessel	endothelial cell of lymphatic vessel
+7	137	mature nk t cell	mature nk t cell
+8	163	slow muscle cell	slow muscle cell
+9	221	cd4-positive, alpha-beta t cell	cd4-positive, alpha-beta t cell
+10	234	tendon cell	tendon cell
+11	266	fast muscle cell	fast muscle cell
+12	407	t cell	t cell
+13	536	cd8-positive, alpha-beta t cell	cd8-positive, alpha-beta t cell
+14	1794	pericyte cell	pericyte cell
+15	1989	macrophage	macrophage
+16	2015	capillary endothelial cell	capillary endothelial cell
+17	3602	endothelial cell of vascular tree	endothelial cell of vascular tree
+18	4831	skeletal muscle satellite stem cell	skeletal muscle satellite stem cell
+19	14148	mesenchymal stem cell	mesenchymal stem cell
