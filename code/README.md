@@ -4,15 +4,16 @@ srun -c 8 -A mseldin_lab --pty --x11 bash -i
 srun -p free --nodes=1 --ntasks=8 --mem-per-cpu=12G --pty --x11 bash -i
 conda activate ee282
 cd /pub/cassandv/myrepos/deconvolution
-cd data/raw
 
 # Download desired TS RNA-seq files.
+cd data/raw
 sh TSdownloads.sh
 unzip 'sc*.h5ad.zip'
 for file in *.h5ad; do h5adtoh5seurat "$file"; done
 
 # Extract cell annotations for future examination.
-h5seuratCellAnnots TS_*.h5seurat
+cd ../..
+for tissue in data/raw/TS_*.h5seurat; do h5seuratCellAnnots "$tissue" 'free'; done
 
 # Collect normalized counts matrices -> cell type expression vectors
 scProcessing TS_*.h5seurat 'free'
@@ -29,8 +30,7 @@ GOPathwaysCheck data/raw/go_terms.RData output/tables/GOPathways.txt
 
 
 
-##### As-is, the commands below analyze one tissue at a time. I will update this section when I have it automated.
-##### See code/src/TissueComparisons.txt for currently planned/completed single-cell Tabula Sapiens dataset(s) matchup to bulk GTEx dataset(s).
+##### The commands below analyze one tissue at a time. See code/src/TissueComparisons.txt for completed single-cell Tabula Sapiens dataset(s) matchup to bulk GTEx dataset(s).
 ##### Example here is for 'Heart'.
 
 # Load bulk dataset and filter for tissue of interest.
@@ -50,7 +50,7 @@ ADAPTSmethods ../../../data/processed/scDF_heart.csv ../../../data/processed/bul
 # Check single-cell cell type markers through Enrichr databases.
 mkdir output/figures/EnrichR_heart
 cd output/figures/EnrichR_heart
-EnrichRCheck scDF.csv #needs troubleshooting to work in Unix, R ok.
+EnrichRCheck scDF.csv #needs troubleshooting to work in Unix, works well in R.
 
 # Correlate cell types locally with GOI. You can change the deconvolution method.
 cd output/figures
